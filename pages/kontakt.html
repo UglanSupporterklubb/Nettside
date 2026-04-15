@@ -4,66 +4,46 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kontakt – Uglan Supporterklubb</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="../css/style.css" />
-  <style>
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-    .contact-box {
-      background: var(--grey);
-      border-radius: 6px;
-      padding: 1.5rem;
-    }
-    .contact-box h3 {
-      font-family: 'Oswald', sans-serif;
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--navy);
-      text-transform: uppercase;
-      letter-spacing: .04em;
-      margin-bottom: .6rem;
-    }
-    .contact-box p { font-size: .95rem; color: #333; line-height: 1.7; }
-    .contact-box a { color: var(--navy); text-decoration: underline; }
-    @media (max-width: 560px) {
-      .contact-grid { grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
 <body>
 
+  <!-- NAVBAR -->
   <nav class="navbar">
-    <a class="nav-logo" href="/index.html">
-      <img src="../img/logo.png" alt="Uglan logo" />
-      <span>Uglan</span>
-    </a>
+    <div class="nav-logo-container">
+      <a class="nav-logo" href="/index.html">
+        <img src="../img/logo.png" alt="Uglan logo" />
+      </a>
+    </div>
     <ul class="nav-links">
       <li><a href="/index.html">Hjem</a></li>
       <li><a href="om-oss.html">Om oss</a></li>
       <li><a href="sanger.html">Sanger</a></li>
-      <li><a href="nyheter.html">Nyheter</a></li>
-      <li><a href="kontakt.html" class="active">Kontakt</a></li>
+      <li><a href="sponsorer.html">Sponsorer</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
     </ul>
     <div class="nav-member">
-      <a href="bli-medlem.html" class="btn-member">Bli medlem</a>
+      <a href="bli-medlem.html" class="btn-member">Bli medlem!</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Meny" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
+
+    <!-- MOBIL-MENY -->
+    <nav class="nav-mobile" id="nav-mobile" aria-label="Mobilmeny">
+      <a href="/index.html">Hjem</a>
+      <a href="om-oss.html">Om oss</a>
+      <a href="sanger.html">Sanger</a>
+      <a href="sponsorer.html">Sponsorer</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
   </nav>
 
-  <nav class="nav-mobile" id="nav-mobile">
-    <a href="/index.html">Hjem</a>
-    <a href="om-oss.html">Om oss</a>
-    <a href="sanger.html">Sanger</a>
-    <a href="nyheter.html">Nyheter</a>
-    <a href="kontakt.html">Kontakt</a>
-    <a href="bli-medlem.html" class="btn-member-mobile">Bli medlem</a>
-  </nav>
-
+  <!-- MAIN CONTENT -->
   <main class="section">
     <h2>Kontakt oss</h2>
     <p>Ta gjerne kontakt med oss om du har spørsmål om medlemskap, arrangementer eller annet.</p>
@@ -91,6 +71,7 @@
     </div>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
@@ -103,19 +84,19 @@
           <li><a href="/index.html">Hjem</a></li>
           <li><a href="om-oss.html">Om oss</a></li>
           <li><a href="sanger.html">Sanger</a></li>
-          <li><a href="nyheter.html">Nyheter</a></li>
+          <li><a href="sponsorer.html">Sponsorer</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
       </div>
       <div class="footer-member">
         <h4>Bli en del av Uglan</h4>
-        <p>Støtt laget og fellesskapet – meld deg inn i dag.</p>
-        <a href="bli-medlem.html" class="btn-footer-member">Bli medlem</a>
+        <p>Støtt laget og fellesskapet – meld deg inn i dag!</p>
+        <a href="bli-medlem.html" class="btn-footer-member">Bli medlem!</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>Org.nr: 000 000 000</span>
-      <span>© 2025 Uglan Supporterklubb</span>
+      <span><a href="https://virksomhet.brreg.no/nb/oppslag/enheter/989576550" target="_blank">Org.nr: 989 576 550</a></span>
+      <span>© <script>document.write(new Date().getFullYear())</script> Uglan Supporterklubb</span>
     </div>
   </footer>
 
