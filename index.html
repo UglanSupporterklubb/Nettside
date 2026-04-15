@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uglan Supporterklubb – Kristiansund</title>
+  <meta name="description" content="Uglan Supporterklubb – offisiell supporterklubb for Kristiansund BK siden 2006." />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-logo-container">
+      <a class="nav-logo" href="index.html">
+        <img src="img/logo.png" alt="Uglan logo" />
+
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Hjem</a></li>
+      <li><a href="pages/om-oss.html">Om oss</a></li>
+      <li><a href="pages/sanger.html">Sanger</a></li>
+      <li><a href="pages/sponsorer.html">Sponsorer</a></li>
+      <li><a href="pages/kontakt.html">Kontakt</a></li>
+    </ul>
+    <div class="nav-member">
+      <a href="pages/bli-medlem.html" class="btn-member">Bli medlem!</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Meny" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- MOBIL-MENY -->
+    <nav class="nav-mobile" id="nav-mobile" aria-label="Mobilmeny">
+      <a href="index.html">Hjem</a>
+      <a href="pages/om-oss.html">Om oss</a>
+      <a href="pages/sanger.html">Sanger</a>
+      <a href="pages/sponsorer.html">Sponsorer</a>
+      <a href="pages/kontakt.html">Kontakt</a>
+    </nav>
+  </nav>
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <img class="hero-logo" src="img/logo.png" alt="Uglan Supporterklubb logo" />
+      <h1>UGLAN SUPPORTERKLUBB</h1>
+      <p>Kristiansund Ballklubb sin offisielle supporterklubb siden 2006.<br>Vi støtter KBK i medvind og i motvind!</p>
+      <div class="hero-actions">
+        <a href="pages/bli-medlem.html" class="btn-primary">Bli medlem!</a>
+        <a href="pages/om-oss.html" class="btn-secondary">Les mer om oss</a>
+      </div>
+    </section>
+
+    <!-- INFOKORT -->
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">🦉</div>
+        <h3>Hvem er vi?</h3>
+        <p>Kristiansund Ballklubbs offisielle supporterklubb stiftet i 2006, dedikert til KBK og byens fotballkultur.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏟️</div>
+        <h3>Tribunekultur</h3>
+        <p>Vi sørger for sanger og stemning på Nordmøre Stadion, i tillegg til enkelte bortekamper.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🤝</div>
+        <h3>Bli medlem!</h3>
+        <p>Alle KBK-supportere er velkomne! Meld deg inn og bli en del av fellesskapet, samt motta fordeler!</p>
+      </div>
+    </div>
+  </main>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="img/logo.png" alt="Uglan logo" />
+        <p>Uglan Supporterklubb<br />Kristiansund, Norge<br />Stiftet 2006</p>
+      </div>
+      <div class="footer-links">
+        <h4>Sider</h4>
+        <ul>
+          <li><a href="index.html">Hjem</a></li>
+          <li><a href="pages/om-oss.html">Om oss</a></li>
+          <li><a href="pages/sanger.html">Sanger</a></li>
+          <li><a href="pages/sponsorer.html">Sponsorer</a></li>
+          <li><a href="pages/kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-member">
+        <h4>Bli en del av Uglan</h4>
+        <p>Støtt laget og fellesskapet – meld deg inn i dag!</p>
+        <a href="pages/bli-medlem.html" class="btn-footer-member">Bli medlem!</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span><a href="https://virksomhet.brreg.no/nb/oppslag/enheter/989576550" target="_blank">Org.nr: 989 576 550</a></span>
+      <span>© <script>document.write(new Date().getFullYear())</script> Uglan Supporterklubb</span>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('nav-mobile');
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open);
+    });
+  </script>
+</body>
+</html>

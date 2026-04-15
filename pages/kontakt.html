@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt – Uglan Supporterklubb</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .contact-box {
+      background: var(--grey);
+      border-radius: 6px;
+      padding: 1.5rem;
+    }
+    .contact-box h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-bottom: .6rem;
+    }
+    .contact-box p { font-size: .95rem; color: #333; line-height: 1.7; }
+    .contact-box a { color: var(--navy); text-decoration: underline; }
+    @media (max-width: 560px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a class="nav-logo" href="/index.html">
+      <img src="../img/logo.png" alt="Uglan logo" />
+      <span>Uglan</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/index.html">Hjem</a></li>
+      <li><a href="om-oss.html">Om oss</a></li>
+      <li><a href="sanger.html">Sanger</a></li>
+      <li><a href="nyheter.html">Nyheter</a></li>
+      <li><a href="kontakt.html" class="active">Kontakt</a></li>
+    </ul>
+    <div class="nav-member">
+      <a href="bli-medlem.html" class="btn-member">Bli medlem</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Meny" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <nav class="nav-mobile" id="nav-mobile">
+    <a href="/index.html">Hjem</a>
+    <a href="om-oss.html">Om oss</a>
+    <a href="sanger.html">Sanger</a>
+    <a href="nyheter.html">Nyheter</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="bli-medlem.html" class="btn-member-mobile">Bli medlem</a>
+  </nav>
+
+  <main class="section">
+    <h2>Kontakt oss</h2>
+    <p>Ta gjerne kontakt med oss om du har spørsmål om medlemskap, arrangementer eller annet.</p>
+
+    <div class="contact-grid">
+      <div class="contact-box">
+        <h3>E-post</h3>
+        <p><a href="mailto:post@uglan.no">post@uglan.no</a></p>
+      </div>
+      <div class="contact-box">
+        <h3>Sosiale medier</h3>
+        <p>
+          <a href="#">Facebook</a><br />
+          <a href="#">Instagram</a>
+        </p>
+      </div>
+      <div class="contact-box">
+        <h3>Organisasjon</h3>
+        <p>Uglan Supporterklubb<br />Org.nr: 000 000 000</p>
+      </div>
+      <div class="contact-box">
+        <h3>Bli medlem</h3>
+        <p>Se vår <a href="bli-medlem.html">bli-medlem-side</a> for info om innmelding og kontingent.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="../img/logo.png" alt="Uglan logo" />
+        <p>Uglan Supporterklubb<br />Kristiansund, Norge<br />Stiftet 2006</p>
+      </div>
+      <div class="footer-links">
+        <h4>Sider</h4>
+        <ul>
+          <li><a href="/index.html">Hjem</a></li>
+          <li><a href="om-oss.html">Om oss</a></li>
+          <li><a href="sanger.html">Sanger</a></li>
+          <li><a href="nyheter.html">Nyheter</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-member">
+        <h4>Bli en del av Uglan</h4>
+        <p>Støtt laget og fellesskapet – meld deg inn i dag.</p>
+        <a href="bli-medlem.html" class="btn-footer-member">Bli medlem</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Org.nr: 000 000 000</span>
+      <span>© 2025 Uglan Supporterklubb</span>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('nav-mobile');
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open);
+    });
+  </script>
+</body>
+</html>

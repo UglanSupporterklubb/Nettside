@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanger – Uglan Supporterklubb</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .song {
+      background: var(--grey);
+      border-left: 4px solid var(--navy);
+      border-radius: 0 6px 6px 0;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .song h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-bottom: .6rem;
+    }
+    .song pre {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: .95rem;
+      line-height: 1.9;
+      white-space: pre-wrap;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a class="nav-logo" href="/index.html">
+      <img src="../img/logo.png" alt="Uglan logo" />
+      <span>Uglan</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/index.html">Hjem</a></li>
+      <li><a href="om-oss.html">Om oss</a></li>
+      <li><a href="sanger.html" class="active">Sanger</a></li>
+      <li><a href="nyheter.html">Nyheter</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+    <div class="nav-member">
+      <a href="bli-medlem.html" class="btn-member">Bli medlem</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Meny" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <nav class="nav-mobile" id="nav-mobile">
+    <a href="/index.html">Hjem</a>
+    <a href="om-oss.html">Om oss</a>
+    <a href="sanger.html">Sanger</a>
+    <a href="nyheter.html">Nyheter</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="bli-medlem.html" class="btn-member-mobile">Bli medlem</a>
+  </nav>
+
+  <main class="section">
+    <h2>Sanger &amp; rop</h2>
+    <p>Her finner du tekstene til sangene vi synger på tribunen. Lær dem utenat og bli med å skape stemning!</p>
+
+    <!-- Legg til sanger her -->
+    <div class="song">
+      <h3>Sang 1 – tittel her</h3>
+      <pre>Sangtekst linje 1
+Sangtekst linje 2
+Sangtekst linje 3</pre>
+    </div>
+
+    <div class="song">
+      <h3>Sang 2 – tittel her</h3>
+      <pre>Sangtekst linje 1
+Sangtekst linje 2
+Sangtekst linje 3</pre>
+    </div>
+
+    <div class="song">
+      <h3>Sang 3 – tittel her</h3>
+      <pre>Sangtekst linje 1
+Sangtekst linje 2
+Sangtekst linje 3</pre>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="../img/logo.png" alt="Uglan logo" />
+        <p>Uglan Supporterklubb<br />Kristiansund, Norge<br />Stiftet 2006</p>
+      </div>
+      <div class="footer-links">
+        <h4>Sider</h4>
+        <ul>
+          <li><a href="/index.html">Hjem</a></li>
+          <li><a href="om-oss.html">Om oss</a></li>
+          <li><a href="sanger.html">Sanger</a></li>
+          <li><a href="nyheter.html">Nyheter</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-member">
+        <h4>Bli en del av Uglan</h4>
+        <p>Støtt laget og fellesskapet – meld deg inn i dag.</p>
+        <a href="bli-medlem.html" class="btn-footer-member">Bli medlem</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Org.nr: 000 000 000</span>
+      <span>© 2025 Uglan Supporterklubb</span>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('hamburger');
+    const menu = document.getElementById('nav-mobile');
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open);
+    });
+  </script>
+</body>
+</html>
