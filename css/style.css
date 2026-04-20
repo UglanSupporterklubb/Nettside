@@ -274,6 +274,47 @@ ul { list-style: none; }
 }
 .section p { line-height: 1.8; color: #333; margin-bottom: 1rem; }
 
+/* ── Kontakt ─────────────────────────────────────────────── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.contact-box {
+  background: var(--grey);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+}
+.contact-box h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  margin-bottom: .4rem;
+}
+.contact-box p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.7;
+}
+.contact-box a { 
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  color: var(--navy);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+.contact-box a i {
+  display: inline-block;
+  width: 1.2rem;
+  text-align: center;
+}
+.contact-box a:hover span { text-decoration: underline; }
+
 /* ── Footer ─────────────────────────────────────────────── */
 footer {
   background: var(--navy);
