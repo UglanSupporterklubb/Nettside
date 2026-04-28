@@ -257,7 +257,8 @@ ul { list-style: none; }
 
 /* ── Section shared ──────────────────────────────────────── */
 .section {
-  max-width: 800px;
+  width: 100%;
+  max-width: min(85%, 900px);
   margin: 0 auto;
   padding: 3rem 1.5rem;
 }
@@ -321,6 +322,68 @@ ul { list-style: none; }
   text-align: center;
 }
 .contact-box a:hover span { text-decoration: underline; }
+
+/* ── Fordeler ─────────────────────────────────────────────── */
+.advantages-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-inline: auto;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.advantages-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--grey);
+  padding: 1.25rem 1.5rem;
+  border: 3px solid var(--navy);
+  border-radius: 6px;
+  gap: .75rem;
+}
+
+.advantages-box img {
+  max-width: 200px;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+}
+
+.advantages-box h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  margin-bottom: .4rem;
+}
+
+.advantages-box ul {
+  width: calc(100% + 3rem);
+  text-align: left;
+  list-style-position: outside;
+  
+  border-top: 2px solid var(--navy);
+  padding-left: 1.5rem;
+  padding-top: .75rem;
+}
+
+.advantages-box li {
+  list-style-type: disc;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.advantages-box li::marker {
+  color: var(--navy);
+}
 
 /* ── Footer ─────────────────────────────────────────────── */
 footer {
