@@ -8,8 +8,9 @@
   --white:  #ffffff;
   --black:  #111111;
   --grey:   #f4f4f4;
+  --grey-blue: #eef2f7;  /* Ny - lys blå bakgrunn */
   --text:   #1a1a1a;
-
+  --text-muted: #555;    /* Ny - dempet tekst */
   --li-border: rgba(255,255,255,.2);
 }
 
@@ -201,7 +202,7 @@ ul { list-style: none; }
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 1rem;
-  letter-spacing: .06em;
+  letter-spacing: .05em;
   text-transform: uppercase;
   padding: .75rem 1.75rem;
   border-radius: 4px;
@@ -214,7 +215,7 @@ ul { list-style: none; }
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  letter-spacing: .06em;
+  letter-spacing: .05em;
   text-transform: uppercase;
   padding: .73rem 1.75rem;
   border-radius: 4px;
@@ -238,17 +239,18 @@ ul { list-style: none; }
   padding: 0 1.5rem;
 }
 .card {
-  background: var(--grey);
-  border-radius: 6px;
-  padding: 2rem 1.5rem;
+  background: var(--grey-blue);
+  padding: 1.25rem 1.5rem;
   text-align: center;
+  border: 3px solid var(--navy);
+  border-radius: 6px;
 }
 .card-icon { font-size: 2.2rem; margin-bottom: .75rem; }
 .card h3 {
   font-family: 'Oswald', sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
-  letter-spacing: .04em;
+  letter-spacing: .05em;
   text-transform: uppercase;
   color: var(--navy);
   margin-bottom: .5rem;
@@ -273,13 +275,55 @@ ul { list-style: none; }
   padding-bottom: .6rem;
   border-bottom: 3px solid var(--navy);
 }
-.section p { line-height: 1.8; color: #333; margin-bottom: 1rem; }
+
+.section p {
+  line-height: 1.8;
+}
+
+.section p.description {
+  margin-bottom: 1rem;
+}
 
 .section p.coming-soon {
   font-size: 1rem;
   font-weight: bold;
   color: var(--owl-brown);
-  letter-spacing: .04em;
+  letter-spacing: .05em;
+}
+
+/* ── Om oss ─────────────────────────────────────────────── */
+.about-content h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  color: var(--navy);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-top: 1rem;
+  padding-bottom: .25rem;
+  border-bottom: 2px solid var(--navy);
+}
+
+.about-content h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1em;
+  color: var(--navy);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-top: .75rem;
+}
+
+.additional-info {
+  margin-top: 1.5rem;
+}
+
+.additional-info a {
+  text-decoration: underline;
+}
+
+.additional-info a:hover {
+  color: var(--navy);
 }
 
 /* ── Kontakt ─────────────────────────────────────────────── */
@@ -289,19 +333,21 @@ ul { list-style: none; }
   gap: 1rem;
 }
 .contact-box {
-  background: var(--grey);
+  background: var(--grey-blue);
   padding: 1.25rem 1.5rem;
   border: 3px solid var(--navy);
   border-radius: 6px;
 }
 .contact-box h3 {
   font-family: 'Oswald', sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--navy);
   text-transform: uppercase;
-  letter-spacing: .04em;
+  letter-spacing: .05em;
   margin-bottom: .4rem;
+  padding-bottom: .25rem;
+  border-bottom: 2px solid var(--navy);
 }
 .contact-box p {
   font-size: 1.1rem;
@@ -340,7 +386,7 @@ ul { list-style: none; }
   align-items: center;
   text-align: center;
   gap: .75rem;
-  background: var(--grey);
+  background: var(--grey-blue);
   padding: 1.25rem 1.5rem;
   border: 3px solid var(--navy);
   border-radius: 6px;
@@ -359,8 +405,9 @@ ul { list-style: none; }
   font-weight: 600;
   color: var(--navy);
   text-transform: uppercase;
-  letter-spacing: .04em;
+  letter-spacing: .05em;
   margin-bottom: .4rem;
+  border-bottom: 2px solid var(--navy);
 }
 
 .advantages-box ul {
@@ -384,6 +431,171 @@ ul { list-style: none; }
 
 .advantages-box li::marker {
   color: var(--navy);
+}
+
+/* ── Sanger ─────────────────────────────────────────────── */
+.songs-container {
+  max-width: 100%;
+}
+
+.song-category {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: .5rem;
+  border-bottom: 2px solid var(--navy);
+}
+.song-category:first-child {
+  margin-top: 0;
+}
+
+.song-box {
+  background: var(--grey-blue);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--navy);
+  border-radius: 4px;
+}
+.song-box:last-child {
+  margin-bottom: 0;
+}
+
+.song-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-bottom: .5rem;
+}
+
+.song-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: .75rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: .2rem .6rem;
+  font-family: 'Oswald', sans-serif;
+  border: 3px solid var(--navy);
+  border-radius: 6px;
+  font-size: .75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+.tag-seier {
+  background: #ffd700;
+  color: #000;
+}
+.tag-seier::before {
+  content: "Etter seier";
+}
+
+.tag-klassiker {
+  background: #cd7f32;
+  color: #fff;
+}
+.tag-klassiker::before {
+  content: "Klassiker";
+}
+
+.tag-molde {
+  background: #176fc1;
+  color: #fff;
+}
+.tag-molde::before {
+  content: "Kun M*lde";
+}
+
+.tag-ny {
+  background: #00a86b;
+  color: #fff;
+}
+.tag-ny::before {
+  content: "Ny!";
+}
+
+.tag-hjemmebane {
+  background: var(--navy);
+  color: #fff;
+}
+.tag-hjemmebane::before {
+  content: "Kun Hjemmebane";
+}
+
+.tag-bortebane {
+  background: #fff;
+  color: #000;
+}
+.tag-bortebane::before {
+  content: "Kun Bortebane";
+}
+
+.tag-cornerefrispark {
+  background: #e21f29;
+  color: #fff;
+}
+.tag-cornerefrispark::before {
+  content: "Offensive cornere & frispark";
+}
+
+.tag-baccalaobrigaden {
+  background: #86858d;
+  color: #fff;
+}
+.tag-baccalaobrigaden::before {
+  content: "BaccalaoBrigaden";
+}
+
+.tag-arkivert {
+  background: #6c757d;
+  color: #fff;
+}
+.tag-arkivert::before {
+  content: "Arkivert";
+}
+
+.song-melody {
+  font-size: .9rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+.song-melody a {
+  color: var(--text-muted);
+  text-decoration: underline;
+}
+
+.song-note {
+  font-size: .9rem;
+  color: var(--owl-brown);
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.song-lyrics {
+  line-height: 1.8;
+  color: var(--text);
+}
+.song-lyrics p {
+  margin-bottom: .75rem;
+}
+.song-lyrics p:last-child {
+  margin-bottom: 0;
+}
+.song-lyrics em {
+  font-style: italic;
+  font-weight: 600;
 }
 
 /* ── Footer ─────────────────────────────────────────────── */
@@ -444,13 +656,15 @@ footer {
 .footer-bottom {
   max-width: 960px;
   margin: 1.5rem auto 0;
-  padding-top: 1.25rem;
+  padding: 1.25rem 0;
   border-top: 1px solid rgba(255,255,255,.15);
   font-size: .8rem;
   opacity: .7;
   display: flex;
-  gap: 1.5rem;
   flex-wrap: wrap;
+  justify-content: center;  /* Legg til for sentrering */
+  column-gap: 1.5rem;  /* Horisontalt mellom elementer */
+  row-gap: .3rem;      /* Mindre vertikalt når de wrapper */
 }
 
 /* ── Responsive ─────────────────────────────────────────── */
